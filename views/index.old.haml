@@ -1,0 +1,210 @@
+/ Nav
+%nav#nav
+  %ul.container
+    %li
+      %a{:href => "#top"} Top
+    %li
+      %a{:href => "#work"} Work
+    %li
+      %a{:href => "#portfolio"} Portfolio
+    %li
+      %a{:href => "#contact"} Contact
+/ Home
+.wrapper.style1.first
+  %article#top.container
+    .row
+      .4u{:class => "12u(mobile)"}
+        %span.image.fit
+          %img{:alt => "", :src => "images/pic00.jpg"}/
+      .8u{:class => "12u(mobile)"}
+        %header
+          %h1
+            Hi. I'm
+            %strong Jane Doe
+        %p
+          And this is
+          %strong Miniport
+          %a{:href => "http://n33.co"} AJ
+          for
+          %a{:href => "http://html5up.net"} HTML5 UP
+          \&amp; released under the
+          %a{:href => "http://html5up.net/license"} CCA license
+        %a.button.big.scrolly{:href => "#work"} Learn about what I do
+/ Work
+.wrapper.style2
+  %article#work
+    %header
+      %h2 Here's all the stuff I do.
+      %p Odio turpis amet sed consequat eget posuere consequat.
+    .container
+      .row
+        .4u{:class => "12u(mobile)"}
+          %section.box.style1
+            %span.icon.featured.fa-comments-o
+            %h3 Consequat lorem
+            %p Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.
+        .4u{:class => "12u(mobile)"}
+          %section.box.style1
+            %span.icon.featured.fa-camera-retro
+            %h3 Lorem dolor tempus
+            %p Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.
+        .4u{:class => "12u(mobile)"}
+          %section.box.style1
+            %span.icon.featured.fa-thumbs-o-up
+            %h3 Feugiat posuere
+            %p Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.
+    %footer
+      %p Lorem ipsum dolor sit sapien vestibulum ipsum primis?
+      %a.button.big.scrolly{:href => "#portfolio"} See some of my recent work
+/ Portfolio
+.wrapper.style3
+  %article#portfolio
+    %header
+      %h2 Heres some stuff I made recently.
+      %p Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat lorem ipsum dolore.
+    .container
+      .row
+        .4u{:class => "12u(mobile)"}
+          %article.box.style2
+            %a.image.featured{:href => "#"}
+              %img{:alt => "", :src => "images/pic01.jpg"}/
+            %h3
+              %a{:href => "#"} Magna feugiat
+            %p Ornare nulla proin odio consequat.
+        .4u{:class => "12u(mobile)"}
+          %article.box.style2
+            %a.image.featured{:href => "#"}
+              %img{:alt => "", :src => "images/pic02.jpg"}/
+            %h3
+              %a{:href => "#"} Veroeros primis
+            %p Ornare nulla proin odio consequat.
+        .4u{:class => "12u(mobile)"}
+          %article.box.style2
+            %a.image.featured{:href => "#"}
+              %img{:alt => "", :src => "images/pic03.jpg"}/
+            %h3
+              %a{:href => "#"} Lorem ipsum
+            %p Ornare nulla proin odio consequat.
+      .row
+        .4u{:class => "12u(mobile)"}
+          %article.box.style2
+            %a.image.featured{:href => "#"}
+              %img{:alt => "", :src => "images/pic04.jpg"}/
+            %h3
+              %a{:href => "#"} Tempus dolore
+            %p Ornare nulla proin odio consequat.
+        .4u{:class => "12u(mobile)"}
+          %article.box.style2
+            %a.image.featured{:href => "#"}
+              %img{:alt => "", :src => "images/pic05.jpg"}/
+            %h3
+              %a{:href => "#"} Feugiat aliquam
+            %p Ornare nulla proin odio consequat.
+        .4u{:class => "12u(mobile)"}
+          %article.box.style2
+            %a.image.featured{:href => "#"}
+              %img{:alt => "", :src => "images/pic06.jpg"}/
+            %h3
+              %a{:href => "#"} Sed amet ornare
+            %p Ornare nulla proin odio consequat.
+    %footer
+      %p Lorem ipsum dolor sit sapien vestibulum ipsum primis?
+      %a.button.big.scrolly{:href => "#contact"} Get in touch with me
+/ Contact
+.wrapper.style4
+  %article#contact.container{:class => "75%"}
+    %header
+      %h2 Have me make stuff for you.
+      %p Ornare nulla proin odio consequat sapien vestibulum ipsum sed lorem.
+    %div
+      .row
+        .12u
+          %form{:action => "#", :method => "post"}
+            %div
+              .row
+                .6u{:class => "12u(mobile)"}
+                  %input#name{:name => "name", :placeholder => "Name", :type => "text"}/
+                .6u{:class => "12u(mobile)"}
+                  %input#email{:name => "email", :placeholder => "Email", :type => "text"}/
+              .row
+                .12u
+                  %input#subject{:name => "subject", :placeholder => "Subject", :type => "text"}/
+              .row
+                .12u
+                  %textarea#message{:name => "message", :placeholder => "Message"}
+              .row{:class => "200%"}
+                .12u
+                  %ul.actions
+                    %li
+                      %input{:type => "submit", :value => "Send Message"}/
+                    %li
+                      %input.alt{:type => "reset", :value => "Clear Form"}/
+      .row
+        .12u
+          %hr/
+          %h3 Find me on ...
+          %ul.social
+            %li
+              %a.icon.fa-twitter{:href => "#"}
+                %span.label Twitter
+            %li
+              %a.icon.fa-facebook{:href => "#"}
+                %span.label Facebook
+            %li
+              %a.icon.fa-dribbble{:href => "#"}
+                %span.label Dribbble
+            %li
+              %a.icon.fa-linkedin{:href => "#"}
+                %span.label LinkedIn
+            %li
+              %a.icon.fa-tumblr{:href => "#"}
+                %span.label Tumblr
+            %li
+              %a.icon.fa-google-plus{:href => "#"}
+                %span.label Google+
+            %li
+              %a.icon.fa-github{:href => "#"}
+                %span.label Github
+            %li
+              %a.icon.fa-rss{:href => "#"}
+                %span RSS
+            %li
+              %a.icon.fa-instagram{:href => "#"}
+                %span Instagram
+            %li
+              %a.icon.fa-foursquare{:href => "#"}
+                %span Foursquare
+            %li
+              %a.icon.fa-skype{:href => "#"}
+                %span Skype
+            %li
+              %a.icon.fa-soundcloud{:href => "#"}
+                %span Soundcloud
+            %li
+              %a.icon.fa-youtube{:href => "#"}
+                %span YouTube
+            %li
+              %a.icon.fa-blogger{:href => "#"}
+                %span Blogger
+            %li
+              %a.icon.fa-flickr{:href => "#"}
+                %span Flickr
+            %li
+              %a.icon.fa-vimeo{:href => "#"}
+                %span Vimeo
+
+          %hr/
+    %footer
+      %ul#copyright
+        %li &#169; Untitled. All rights reserved.
+        %li
+          Design:
+          %a{:href => "http://html5up.net"} HTML5 UP
+/ Scripts
+%script{:src => "assets/js/jquery.min.js"}
+%script{:src => "assets/js/jquery.scrolly.min.js"}
+%script{:src => "assets/js/skel.min.js"}
+%script{:src => "assets/js/skel-viewport.min.js"}
+%script{:src => "assets/js/util.js"}
+/[if lte IE 8] <script src="assets/js/ie/respond.min.js"></script>
+%script{:src => "assets/js/main.js"}

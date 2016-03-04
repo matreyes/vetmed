@@ -1,0 +1,20 @@
+vetblue:
+  img: vetblue.jpg
+  pdf: vetblue.pdf
+  name: Vet Blue
+  description: Vet Blue es un protocolo de abordaje ecográfico del torax en urgencias. Su correlación con patrones radiográficos permite darle un uso más allá de la sala de urgencia.
+flutd:
+  img: flutd.jpg
+  pdf: flutd.pdf
+  name: FLUTD en Imágenes
+  description: El diagnóstico por imágenes es fundamental cuando se quiere determinar la causa específica de un cuadro de tracto urinario bajo en felinos.
+afast:
+  img: afast.jpg
+  pdf: afast.pdf
+  name: AFAST
+  description: AFAST es un protocolo de examen ecográfico enfocado en la búsqueda de líquido libre en abdomen, especialmente útil en situaciones de urgencia.
+adrenales:
+  img: adrenales.jpg
+  pdf: adrenales.pdf
+  name: Adrenales
+  description: Las glándulas adrenales forman parte del examen ecográfico abdominal. Su evaluación es fundamental y en este documento se entregan claves para su reconocimiento.
