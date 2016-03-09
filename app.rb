@@ -25,7 +25,6 @@ end
 post "/send_document" do
   doc = params[:document]
   email = params[:email]
-  raise "holi"
 
   File.open('../emails.txt', 'a') do |f|
     f.puts email
@@ -39,4 +38,18 @@ post "/send_document" do
     html_body: "<h3>#{DOCS[doc]['name']}</h3><p>¡Bienvenido a nuestra comunidad!<br>Te mantendremos informado cuando publiquemos nuevos documentos.<br>",
     attachments: { DOCS[doc]['pdf'] => File.binread("public/docs/pdf/#{DOCS[doc]['pdf']}") }
   )
+end
+
+post "/contact" do
+  # binding.pry
+
+  Pony.mail(to: 'piachangl@gmail.com',
+    via: :smtp,
+    via_options: EMAIL_OPTIONS,
+    subject: params["subject"],
+    reply_to: params['email'],
+    body: "#{params['message']}\n\nPor: #{params['name']} - #{params['email']}\n\n"
+  )
+
+  redirect to('/')
 end
