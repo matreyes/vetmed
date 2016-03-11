@@ -10,3 +10,4 @@ gem "hamlit"
 gem 'pony'
 gem "pry"
 gem "pry-nav"
+gem 'unicorn'
