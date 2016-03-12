@@ -12,9 +12,9 @@ function require_email(doc, name){
     {
       type: "input",
       title: name,
-      text: 'Ingresa tu e-mail para enviarte el documento al correo',
+      text: 'Ingresa tu e-mail para enviarte el documento al correo\n (no lo compartiremos ni enviaremos spam).',
       inputPlaceholder: "e-mail",
-      showCancelButton: false,
+      showCancelButton: true,
       closeOnConfirm: false
     }, function(inputvalue) {
       if (validateEmail(inputvalue)){
