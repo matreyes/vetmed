@@ -26,17 +26,14 @@ class Vetmed < Sinatra::Base
     doc = params[:document]
     email = params[:email]
 
-    File.open('../emails.txt', 'a') do |f|
-      f.puts email
+    if email.present?
+      File.open('../emails.txt', 'a') do |f|
+        f.puts email
+      end
     end
 
-    Pony.mail(to: email,
-      via: :smtp,
-      via_options: EMAIL_OPTIONS,
-      subject: "Vetlinea: #{DOCS[doc]['name']}",
-      html_body: "<h3>#{DOCS[doc]['name']}</h3><p>¡Bienvenido a nuestra comunidad!<br>Te mantendremos informado cuando publiquemos nuevos documentos.<br>",
-      attachments: { DOCS[doc]['pdf'] => File.binread("public/docs/pdf/#{DOCS[doc]['pdf']}") }
-    )
+    { file: "/docs/pdf/#{DOCS[doc]['pdf']}" }.to_json
+
   end
 
   post "/contact" do

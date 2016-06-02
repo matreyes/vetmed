@@ -12,17 +12,14 @@ function require_email(doc, name){
     {
       type: "input",
       title: name,
-      text: 'Ingresa tu e-mail para enviarte el documento al correo\n (no lo compartiremos ni enviaremos spam).',
-      inputPlaceholder: "e-mail",
-      showCancelButton: true,
-      closeOnConfirm: false
-    }, function(inputvalue) {
-      if (validateEmail(inputvalue)){
-        sendEmail(inputvalue, doc);
-      }else{
-         swal.showInputError("¡Debes ingresar tu correo!");
-         return false
-      }
+      text: 'Ingresa tu e-mail para mantenerte al tanto de nuestras publicaciones!',
+      inputPlaceholder: "e-mail (opcional)",
+      showCancelButton: true  ,
+      closeOnConfirm: true
+    },
+    function(inputvalue) {
+      if (inputvalue === false) return false;
+      sendEmail(inputvalue, doc);
     }
   );
 }
@@ -30,27 +27,11 @@ function require_email(doc, name){
 function sendEmail(email, doc){
 
   $.post( "/send_document", {email: email, document: doc})
-    .fail(function() {
-      swal({
-        title: ":-(",
-        type: "error",
-        html: true,
-        text: 'Tenemos un problema! Envíanos un correo a ' +
-          '<a href="mailto:piachangl@gmail.com">piachangl@gmail.com</a> para solucionarlo!'
-      });
-    });
-
-  swal({
-    title: ":-)",
-    type: "success",
-    html: true,
-    text: 'Hemos enviado el documento a tu correo: <strong>' +
-    email + '</strong>'
-  });
-    //
-
-  // agradecer y decir que pronto le llegará
-
+    .done( function(data) {
+        d = JSON.parse(data)
+        window.location.href = d.file
+      }
+    )
 }
 
 function validateEmail(email) {
