@@ -18,3 +18,8 @@ adrenales:
   pdf: adrenales.pdf
   name: Adrenales
   description: Las glándulas adrenales forman parte del examen ecográfico abdominal. Su evaluación es fundamental y en este documento se entregan claves para su reconocimiento.
+trigliceridemia:
+  img: trigliceridemia.jpg
+  pdf: trigliceridemia.pdf
+  name: Hipertrigliceridemia
+  description: La lipemia aumenta la viscosidad de la sangre, generando mayor predisposición de accidentes vasculares, así como también una predisposición al desarrollo de cuadros de pancreatitis.

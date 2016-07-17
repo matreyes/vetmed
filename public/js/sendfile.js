@@ -14,8 +14,10 @@ function require_email(doc, name){
       title: name,
       text: 'Ingresa tu e-mail para mantenerte al tanto de nuestras publicaciones!',
       inputPlaceholder: "e-mail (opcional)",
-      showCancelButton: true  ,
-      closeOnConfirm: true
+      showCancelButton: true,
+      closeOnConfirm: true,
+      confirmButtonText: "Descargar",
+      cancelButtonText: "Cancelar"
     },
     function(inputvalue) {
       if (inputvalue === false) return false;

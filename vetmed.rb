@@ -26,7 +26,7 @@ class Vetmed < Sinatra::Base
     doc = params[:document]
     email = params[:email]
 
-    if email.present?
+    if email != ""
       File.open('../emails.txt', 'a') do |f|
         f.puts email
       end
